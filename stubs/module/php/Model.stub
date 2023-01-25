@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models\{{modelName}};
+
+use App\Models\{{modelName}}\Relationships\{{modelName}}Relationship;
+use App\Models\{{modelName}}\Scopes\{{modelName}}Scope;
+use Illuminate\Database\Eloquent\Model;
+
+class {{modelName}} extends Model
+{
+    use {{modelName}}Scope, //scopes of {{modelName}}
+     {{modelName}}Relationship; //relationships of {{modelName}}
+
+        protected $guarded = [
+            'id',
+            'created_at',
+            'updated_at',
+        ];
+}
